@@ -15,7 +15,16 @@ const createPolicy = (name, amount) => {
     };
 };
 
-
+//Simulates a person creating a claim
+const createClaim = (name, amountOfMoneyToCollect) => {
+    return {
+        type: 'CREATE_CLAIM',
+        payload: {
+            name: name,
+            amountOfMoneyToCollect: amountOfMoneyToCollect
+        }
+    }
+}
 
 //Simulates people deleting a policy
 const deletePolicy = (name) => {
